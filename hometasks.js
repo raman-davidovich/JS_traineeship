@@ -8,7 +8,7 @@ const tasks = [
     <br />
     <img id="lesson1Task1DescriptionImage" class="image" />`,
       githubLink:
-        "https://github.com/raman-davidovich/JS_traineeship/blob/main/Lesson1/solutions/lesson1Task1.js",
+        "https://github.com/raman-davidovich/JS_traineeship/blob/main/solutions/lesson1Task1.js",
     },
     {
       description: `Transform a number into a binary form.<br />
@@ -17,7 +17,7 @@ const tasks = [
       *output the number by any method<br />
       *receive a number from user by any input method.`,
       githubLink:
-        "https://github.com/raman-davidovich/JS_traineeship/blob/main/Lesson1/solutions/lesson1Task2.js",
+        "https://github.com/raman-davidovich/JS_traineeship/blob/main/solutions/lesson1Task2.js",
     },
   ],
 ];
