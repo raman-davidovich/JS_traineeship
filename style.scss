@@ -1,0 +1,574 @@
+$background-color: #17161e;
+$grey-background-color: #302f35;
+$main-text-color: #ffffff;
+$border-color: #feda00;
+
+$hover-text-color: #17161e;
+$hover-background-color: #faf089;
+
+$active-background-color: #feda00;
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#application {
+  width: 100vw;
+  height: 100vh;
+  background-color: $background-color;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+
+  .lessons {
+    display: flex;
+    justify-content: space-around;
+    padding: 11px 0;
+
+    button {
+      color: $main-text-color;
+      border: 2px solid $border-color;
+      border-radius: 8px;
+      background-color: $background-color;
+      font-size: 20px;
+      padding: 11px 22px;
+      cursor: pointer;
+
+      &:hover,
+      &.active:hover {
+        color: $hover-text-color;
+        background-color: $hover-background-color;
+        transition: all 0.3s ease;
+      }
+
+      &.active {
+        color: $hover-text-color;
+        background-color: $active-background-color;
+      }
+    }
+  }
+
+  #information {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: $grey-background-color;
+    margin: 15px;
+    border: 1px solid $border-color;
+    border-radius: 15px;
+
+    .mock {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+
+      h2 {
+        color: $main-text-color;
+      }
+    }
+
+    .tasks {
+      padding: 11px;
+
+      button {
+        color: $main-text-color;
+        border: 2px solid $border-color;
+        border-radius: 8px;
+        background-color: $background-color;
+        font-size: 20px;
+        padding: 11px 22px;
+        margin-right: 10px;
+        cursor: pointer;
+
+        &:hover,
+        &.active:hover {
+          color: $hover-text-color;
+          background-color: $hover-background-color;
+          transition: all 0.3s ease;
+        }
+
+        &.active {
+          color: $hover-text-color;
+          background-color: $active-background-color;
+        }
+      }
+    }
+
+    #assignment {
+      display: flex;
+      flex-direction: row;
+      flex-grow: 1;
+      margin: 0 10px 10px;
+      border: 1px solid $border-color;
+      border-radius: 8px;
+
+      #description {
+        flex: 50%;
+        border-right: 1px solid $border-color;
+        padding: 10px;
+
+        h3,
+        #text {
+          color: $main-text-color;
+          margin: 0 0 10px;
+        }
+
+        #text {
+          .image {
+            width: 100%;
+          }
+        }
+      }
+
+      #result {
+        flex: 50%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        color: $main-text-color;
+
+        h3 {
+          color: $main-text-color;
+          margin: 0 0 10px;
+        }
+
+        a {
+          align-self: flex-end;
+          color: $main-text-color;
+          border: 2px solid $border-color;
+          border-radius: 8px;
+          background-color: $background-color;
+          font-size: 20px;
+          padding: 11px;
+          cursor: pointer;
+          text-decoration: none;
+
+          &:hover,
+          &.active:hover {
+            color: $hover-text-color;
+            background-color: $hover-background-color;
+            transition: all 0.3s ease;
+          }
+
+          &.active {
+            color: $hover-text-color;
+            background-color: $active-background-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+::backdrop {
+  background-image: linear-gradient(
+    45deg,
+    magenta,
+    rebeccapurple,
+    dodgerblue,
+    green
+  );
+  opacity: 0.75;
+}
+
+.page-title {
+  text-align: center;
+}
+
+.slider-container {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider > .sliderDialog {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  justify-content: center;
+  flex-direction: column;
+  .imageSlider {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  button {
+    margin: 0 37%;
+  }
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: white;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+.solution {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  h3 {
+    text-align: center;
+  }
+
+  #transform,
+  #number,
+  #array,
+  #condition,
+  #filter {
+    width: 300px;
+  }
+
+  #number,
+  #condition {
+    margin-bottom: 10px;
+  }
+}
+
+dialog:modal {
+  button {
+    margin: 0 45% !important;
+  }
+}
+
+#alert,
+#prompt,
+#confirm,
+#reflash {
+  margin-bottom: 10px;
+  width: 100px;
+  align-self: center;
+}
+
+#lesson6Task1 {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  height: 500px;
+
+  #drawBlock {
+    flex: 6.5;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    background-color: $main-text-color;
+    color: $background-color;
+    padding: 5px;
+    overflow-x: scroll;
+
+    #post {
+      margin-bottom: 5px;
+      padding: 5px;
+      border: 1px solid $border-color;
+      border-radius: 8px;
+      h4,
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  #buttonsBlock {
+    flex: 3.5;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    #fetchStatus {
+      display: flex;
+      flex-direction: raw;
+      gap: 15px;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    #list,
+    #clear {
+      width: 84.91px;
+    }
+  }
+}
+
+.empty {
+  color: red;
+}
+
+.fulfilled {
+  color: green;
+}
+
+#lesson7Task1,
+#lesson7Task2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background-color: $main-text-color;
+  position: relative;
+
+  #replace {
+    transition: left 0.5s ease-in-out, top 0.5s ease-in-out;
+  }
+}
+
+#lesson7Task2 {
+  background-color: #f6f6f6;
+  color: $background-color;
+
+  #stopwatch,
+  #timer {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+  }
+  #stopwatch {
+    border-right: 1px solid $border-color;
+  }
+
+  h4 {
+    margin: 0;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 100px;
+    color: #303030;
+    opacity: 0.1;
+  }
+
+  #clock_area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 242px;
+    height: 242px;
+    background: linear-gradient(180deg, #e1e1e1 0%, #ffffff 100%);
+    border-radius: 50%;
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
+      10px 10px 15px rgba(70, 70, 70, 0.12);
+  }
+
+  #stopwatchTensMinutes,
+  #stopwatchMinutes,
+  #divider,
+  #stopwatchTensSeconds,
+  #stopwatchSeconds,
+  #timerTensMinutes,
+  #timerMinutes,
+  #timerTensSeconds,
+  #timerSeconds {
+    color: #e08b01;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 54px;
+  }
+
+  #stopwatchReset,
+  #timerReset {
+    position: absolute;
+    top: 80%;
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #ffab00 0%, #d68100 100%);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+    border: 0;
+  }
+
+  #changeClock {
+    margin-top: 20px;
+  }
+
+  #timerIncrement,
+  #timerDecrement {
+    color: $main-text-color;
+    border: 0;
+    font-weight: 700;
+    font-size: 15px;
+    background: linear-gradient(180deg, #ffab00 0%, #d68100 100%);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+
+  #stopwatchStart,
+  #timerStart {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: $main-text-color;
+    display: block;
+    width: 327px;
+    height: 48px;
+    border-radius: 80px;
+    background: linear-gradient(180deg, #ffab00 0%, #d68100 100%);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+    border: 0;
+  }
+
+  #stopwatchReset:hover,
+  #stopwatchStart:hover,
+  #timerIncrement:hover,
+  #timerDecrement:hover,
+  #timerReset:hover,
+  #timerStart:hover {
+    box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+  }
+
+  #stopwatch > #stopwatchStart {
+    margin-top: 54.5px;
+  }
+}
+
+#lesson5Task1 {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  height: 500px;
+
+  #drawBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    flex: 6.5;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    background-color: $main-text-color;
+    color: $background-color;
+    padding: 5px;
+    overflow-x: scroll;
+
+    #stackElement,
+    #availableIndex {
+      margin-bottom: 5px;
+      padding: 5px;
+      border: 1px solid $border-color;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 22px;
+    }
+
+    #availableIndex {
+      border: 1px dashed $border-color;
+    }
+  }
+
+  #buttonsBlock {
+    flex: 3.5;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    #createStack,
+    #addElement {
+      display: flex;
+      flex-direction: raw;
+      gap: 15px;
+    }
+
+    #createFromEntity {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+
+  dialog:modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    button {
+      margin: 0 !important;
+      width: fit-content;
+    }
+  }
+}
+
+#lesson3Task2,
+#lesson3Task1 {
+  fieldset {
+    display: flex;
+    flex-direction: column;
+
+    #parameters {
+      display: flex;
+      flex-direction: column;
+      width: 200px;
+      gap: 5px;
+    }
+  }
+
+  #list {
+    height: 300px;
+    overflow-y: scroll;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    background-color: $main-text-color;
+    color: $background-color;
+  }
+}
+
+#lesson4Task1 {
+  input {
+    width: 50px;
+  }
+
+  #values > fieldset > div:first-of-type {
+    margin-bottom: 10px;
+  }
+
+  #buttons {
+    button {
+      width: 50px;
+    }
+  }
+}
