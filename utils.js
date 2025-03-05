@@ -1,6 +1,9 @@
 import hometasks from "./hometasks";
 import { lesson1Task1Html, lesson1Task1Logic } from "./solutions/lesson1Task1";
 import { lesson1Task2Html, lesson1Task2Logic } from "./solutions/lesson1Task2";
+import { lesson2Task1Html, lesson2Task1Logic } from "./solutions/lesson2Task1";
+import { lesson2Task2Html, lesson2Task2Logic } from "./solutions/lesson2Task2";
+import { lesson2Task3Html, lesson2Task3Logic } from "./solutions/lesson2Task3";
 
 import images from "./assets/images";
 
@@ -8,6 +11,11 @@ const solutions = [
   [
     { html: lesson1Task1Html, logic: lesson1Task1Logic },
     { html: lesson1Task2Html, logic: lesson1Task2Logic },
+  ],
+  [
+    { html: lesson2Task1Html, logic: lesson2Task1Logic },
+    { html: lesson2Task2Html, logic: lesson2Task2Logic },
+    { html: lesson2Task3Html, logic: lesson2Task3Logic },
   ],
 ];
 
@@ -99,6 +107,10 @@ function setImageSource(lesson, task, elementIdOverride) {
     case "1-1":
       elementId = "lesson1Task1DescriptionImage";
       imageUrl = images.lesson1.task1.example;
+      break;
+    case "2-3":
+      elementId = "lesson2Task3DescriptionImage";
+      imageUrl = images.lesson2.task3.example;
       break;
     default:
       return;
