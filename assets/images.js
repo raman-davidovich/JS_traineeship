@@ -11,6 +11,7 @@ import lesson1Task1Quiz10ImgUrl from "./example10.png";
 
 import lesson1Task1ExampleImgUrl from "./Lesson1_task1_example.png";
 import lesson2Task3ExampleImgUrl from "./Lesson2_task3_example.png";
+import lesson3Task2ExampleImgUrl from "./Lesson3_task2_example.png";
 
 const images = {
   lesson1: {
@@ -33,6 +34,11 @@ const images = {
   lesson2: {
     task3: {
       example: lesson2Task3ExampleImgUrl,
+    },
+  },
+  lesson3: {
+    task2: {
+      example: lesson3Task2ExampleImgUrl,
     },
   },
 };

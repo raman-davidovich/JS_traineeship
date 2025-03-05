@@ -40,7 +40,7 @@ const tasks = [
       description: `It is necessary to reflash the global object a little.<br />
       Consider these three functions:<br />
       <br />
-      <img id="lesson2Task2DescriptionImage" class="image"/>
+      <img id="lesson2Task3DescriptionImage" class="image"/>
       <br />
       <br />
       When calling alert(), the logic confirm(), prompt - alert(), confirm() - prompt() should work, feel free to use yourown order.<br />
@@ -48,6 +48,45 @@ const tasks = [
       *Additionally - try to do this as briefly as possible, in the least amount of steps. (By action we mean any operation - creating a variable, equating, calling a method)`,
       githubLink:
         "https://github.com/raman-davidovich/JS_traineeship/blob/main/solutions/lesson2Task3.js",
+    },
+  ],
+  [
+    {
+      description: `Create a regular object and make it iterable. In this case, the iteration should proceed as follows:<br />
+       All values from the object's
+         <strong>from</strong>
+        property to the
+        <strong>to</strong>
+       property must be traversed one by one. (if to < from - an error should occur).<br />
+      If to or from is not specified OR to or from are not numbers, an error should occur.<br />
+      <br />
+      <br />
+      > Examples:<br />
+      const myIterable = {from: 1, to: 4};<br />
+      for (let item of myIterable) {<br />
+        console.log(item); // 1,2,3,4<br />
+      }<br />
+      <br />
+      const myIterable = {from: "aaa", to: 4};<br />
+      for (let item of myIterable) { // Error!<br />
+        console.log(item)<br />
+      }`,
+      githubLink:
+        "https://github.com/raman-davidovich/JS_traineeship/blob/main/solutions/lesson3Task1.js",
+    },
+    {
+      description: `You need to implement a function that will take a person's
+        <strong>name</strong>
+       and
+        <strong>age</strong>
+       as arguments and then return an array of objects. Each object must be created in a unique way.<br />
+      Additionally - it is not necessary to write these properties as your own for the object, you can play with prototypes
+      <br />
+      <br />
+      <img id="lesson3Task2DescriptionImage" class="image"/>
+      `,
+      githubLink:
+        "https://github.com/raman-davidovich/JS_traineeship/blob/main/solutions/lesson3Task2.js",
     },
   ],
 ];

@@ -8,7 +8,7 @@ import {
 } from "./utils";
 import hometasks from "./hometasks";
 
-const lastFinishedLesson = 2;
+const lastFinishedLesson = 3;
 
 let currentLesson = lastFinishedLesson;
 let currentTask = 1;
