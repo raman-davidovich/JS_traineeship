@@ -307,3 +307,19 @@ dialog:modal {
     color: $background-color;
   }
 }
+
+#lesson4Task1 {
+  input {
+    width: 50px;
+  }
+
+  #values > fieldset > div:first-of-type {
+    margin-bottom: 10px;
+  }
+
+  #buttons {
+    button {
+      width: 50px;
+    }
+  }
+}

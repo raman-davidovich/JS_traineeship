@@ -89,6 +89,25 @@ const tasks = [
         "https://github.com/raman-davidovich/JS_traineeship/blob/main/solutions/lesson3Task2.js",
     },
   ],
+  [
+    {
+      description: `Create a Calculator class. The constructor accepts two numbers, if at least one is not valid, it throw an error. We do not consider Infinity and other special values of the number type to be valid numbers.Methods:<br />
+      setX() - set the first number<br />
+      setY() - set the second number <br />
+      <br />
+      logSum() - return the sum of the given numbers<br />
+      logMul() - return the product of the given numbers<br />
+      logSub() - return the difference of the given numbers<br />
+      logDiv() - return the quotient of the given numbers, throws an error when dividing by 0.<br />
+      <br />
+      All methods of the second group should work correctly even if they are placed in a separate variable.<br />
+      <br />
+      const logSumRef = calculator.logSum;<br />
+      console.log(logSumRef()); // still works`,
+      githubLink:
+        "https://github.com/raman-davidovich/JS_traineeship/blob/main/solutions/lesson4Task1.js",
+    },
+  ],
 ];
 
 export default tasks;
